@@ -14,6 +14,6 @@ public class Enviado extends EstadoBase {
 
     @Override
     public void cancelar(Pedido pedido) {
-        pedido.cambiarEstado(new Cancelado());
+        throw new IllegalStateException("No se puede cancelar un pedido que ya se encuentra en estado ENVIADO.");
     }
 }
