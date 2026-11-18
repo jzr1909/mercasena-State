@@ -39,4 +39,21 @@ class PedidoTest {
         p.entregar();
         assertThrows(IllegalStateException.class, p::cancelar);
     }
+
+    @Test
+    void cancelarPagadoGeneraReembolsoPendiente() {
+        Pedido p = new Pedido();
+        p.pagar();
+        p.cancelar();
+        assertEquals("CANCELADO", p.getEstado());
+        assertTrue(p.isReembolsoPendiente());
+    }
+
+    @Test
+    void noSePuedeCancelarPedidoEnviado() {
+        Pedido p = new Pedido();
+        p.pagar();
+        p.enviar();
+        assertThrows(IllegalStateException.class, p::cancelar);
+    }
 }

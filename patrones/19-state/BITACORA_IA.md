@@ -40,7 +40,7 @@ Envía el **mismo prompt** a tres herramientas distintas y compara.
 
 | # | Error | Prueba que lo demuestra (nombre del método de prueba) | Commit de la corrección | ¿Lo encontré yo, la IA o ambos? |
 |---|---|---|---|---|
-| 1 | El estado Pagado saltaba directamente a ENTREGADO en lugar de pasar a ENVIADO.|flujoCompleto | |Yo |
+| 1 | El estado Pagado saltaba directamente a ENTREGADO en lugar de pasar a ENVIADO.|flujoCompleto |fix(state): transicion corregida de Pagado a Enviado |Yo |
 | 2 | | | | |
 | 3 | | | | |
 
