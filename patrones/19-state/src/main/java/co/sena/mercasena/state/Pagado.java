@@ -9,7 +9,7 @@ public class Pagado extends EstadoBase {
 
     @Override
     public void enviar(Pedido pedido) {
-        pedido.cambiarEstado(new Entregado());
+        pedido.cambiarEstado(new Enviado());
     }
 
     @Override

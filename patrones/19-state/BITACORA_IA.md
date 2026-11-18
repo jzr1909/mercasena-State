@@ -1,7 +1,7 @@
 # Bitácora de uso de IA — Patrón State
 
-Aprendices: ______________________ / ______________________
-Ficha: ________  Fecha de inicio: ________
+Aprendices: Juan Jose Zuluaga Rincon
+Ficha: 3409871  Fecha de inicio: 12/11/2026
 
 > La bitácora es evidencia del ítem 18 de la lista de chequeo. Regístralo **todo**, también las respuestas de la IA que estaban mal.
 > Nunca pegues en una IA contraseñas, tokens, datos personales reales ni código que no tengas permiso de compartir.
@@ -12,9 +12,11 @@ Antes de abrir cualquier IA, lee el README y el código. Escribe aquí qué erro
 
 | # | Archivo y línea | ¿Qué creo que está mal? | ¿Qué regla de negocio rompe? |
 |---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 |La clase Enviado en la linea 17 | Aparece que al cancelar un pedido que esta en estado enviado pasa a estar cancelado | La que dice que en especial un pedido enviado no puede ser cancelado ya que va en las manos del transpotador|
+| 2 |La clase Pagado en la linea 12 | Cuando llaman al metodo enviar el estado no pasa a estar enviado si no que entregado. | Daña el flujo normal que debe de tener, ya que despues de pagado debe ser pasado a enviado y no a entregado |
+| 3 |La clase Pagado en la linea 17 | Esta cancelando un pedido pagado pero no hace activa el reembolso| Rompe la regla que habla de que si un pedido fue pagado pero lo cancelan se debe activar el reembolso pendiente |
+
+
 
 ## 2. Registro de interacciones con IA
 
@@ -38,7 +40,7 @@ Envía el **mismo prompt** a tres herramientas distintas y compara.
 
 | # | Error | Prueba que lo demuestra (nombre del método de prueba) | Commit de la corrección | ¿Lo encontré yo, la IA o ambos? |
 |---|---|---|---|---|
-| 1 | | | | |
+| 1 | El estado Pagado saltaba directamente a ENTREGADO en lugar de pasar a ENVIADO.|flujoCompleto | |Yo |
 | 2 | | | | |
 | 3 | | | | |
 
