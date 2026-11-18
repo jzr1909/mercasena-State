@@ -14,6 +14,7 @@ public class Pagado extends EstadoBase {
 
     @Override
     public void cancelar(Pedido pedido) {
+        pedido.marcarReembolsoPendiente();
         pedido.cambiarEstado(new Cancelado());
     }
 }

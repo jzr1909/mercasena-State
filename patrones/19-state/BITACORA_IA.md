@@ -24,7 +24,7 @@ Copia una fila por cada consulta importante.
 
 | # | Herramienta (ChatGPT / Gemini / DeepSeek / Copilot / otra) | Prompt (resumen o enlace) | ¿Qué respondió? | ¿Era correcto? ¿Cómo lo verifiqué? | ¿Lo usé? (sí / no / modificado) |
 |---|---|---|---|---|---|
-| 1 | | | | | |
+| 1 |Gemini |Prompt RTCERF + One-Shot usando el README y el patrón State para generar las dos pruebas unitarias faltantes de PedidoTest.java (reembolso en pagado y restricción de cancelación en enviado).| Generó los métodos cancelarPagadoGeneraReembolsoPendiente() y noSePuedeCancelarPedidoEnviado() adaptados a la estructura del proyecto. |Sí, era correcto. Lo verifiqué al ejecutar las pruebas en JUnit 5 y confirmar que fallaron exactamente como se esperaba (AssertionFailedError), cumpliendo el Paso 3. |Sí |
 | 2 | | | | | |
 | 3 | | | | | |
 
